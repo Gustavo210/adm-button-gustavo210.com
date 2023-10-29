@@ -1,0 +1,8 @@
+{
+  "name": "adm-button",
+  "description": "botao de administração",
+  "uuid": "adm-button@gustavo210.com",
+  "shell-version": [
+    "44"
+  ]
+}
