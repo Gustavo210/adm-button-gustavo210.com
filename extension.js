@@ -87,13 +87,7 @@ function execCommand(command) {
     null
   );
   if (success) {
-    GLib.child_watch_add(GLib.PRIORITY_LOW, pid, (pid, status) => {
-      if (status == 0) {
-        // O script foi executado com sucesso, você pode ocultar o indicador de carregamento
-      } else {
-        Main.notify(_(`Falha ao executar o script ${command}`));
-      }
-    });
+    GLib.child_watch_add(GLib.PRIORITY_LOW, pid);
   } else {
     Main.notify(_(`Falha ao executar o script ${command}`));
   }
